@@ -10,7 +10,6 @@ var checkPerfectNumber = function(num) {
         }
     }
     
-    
     if(sumDivisor === num){
       return true;
     }else{
