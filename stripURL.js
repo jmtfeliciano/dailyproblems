@@ -25,7 +25,12 @@ function stripUrlParams(url, paramsToStrip){
     parMap.set(parameterArray[i][0], parameterArray[i][1]);
   }
 
-  
+  if(paramsToStrip){
+    paramsToStrip.forEach(function(value){
+      parMap.delete(value);
+    });
+  } 
+
   var currentKey = 0;
   for (var [key, value] of parMap) {
     homeLink = homeLink+key+'='+value;
