@@ -22,7 +22,9 @@ function stripUrlParams(url, paramsToStrip){
   
   for(var i=0; i<parameterArray.length; i++){
     parameterArray[i] = parameterArray[i].split('=');
-    parMap.set(parameterArray[i][0], parameterArray[i][1]);
+    if(!parMap.has(parameterArray[i][0])){
+      parMap.set(parameterArray[i][0], parameterArray[i][1]);
+    }
   }
 
   if(paramsToStrip){
