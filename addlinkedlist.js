@@ -15,18 +15,24 @@
  */
 
 var addTwoNumbers = function(l1, l2) {
+    // node creator
     function ListNode(val) {
       this.val = val;
       this.next = null;
-    }
+    };
 
+    //initialize the first node
     var l3 = new ListNode((l1.val+l2.val)%10);
-
+    l1 = l1.next;
+    l2 = l2.next;
 
     while(l1.next && l2.next){
+
+      l3.next = new ListNode((l1.val+l2.val)%10); //{3,{4,null}}
+      l3.next = l3.next.next;
       l1 = l1.next;
       l2 = l2.next;
-
-      l3.next = new ListNode((l1.val+l2.val)%10);
     }
+
+    return l3;
 };
