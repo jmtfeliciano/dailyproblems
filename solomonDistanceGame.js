@@ -1,6 +1,4 @@
 /*
-
-
 Walkthrough Sample:  
 let mapExample = [[1,3,5],[2,0,10],[-3,1,4],[4,2,4],[1,1,5],[-3,0,12],[2,1,12],[-2,2,6]];
 
@@ -31,4 +29,24 @@ Here are what the values of each subarray represent:
 */ 
 
 function solomonsQuest(ar){
+
+  let x = 0;
+  let y = 0;
+  let currDilation = 0;
+  
+  ar.forEach(function(val,index){
+    let dilation = val[0]; 
+    currDilation += dilation;
+    let direction = val[1];
+    let distance = val[2];
+    let dilatedDistance = distance * (2**currDilation);
+    
+    direction === 0 ? y += dilatedDistance :
+      direction === 1 ? x += dilatedDistance :
+        direction === 2 ? y -=  dilatedDistance : x -=  dilatedDistance;
+
+  });
+  
+  return [x,y];
+
 }
