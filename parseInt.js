@@ -24,7 +24,7 @@ function parseInt(string) {
   numbers['one'] = 1, numbers['two'] = 2, numbers['three'] = 3,
   numbers['four'] = 4, numbers['five'] = 5,  numbers['six'] = 6,
   numbers['seven'] = 7, numbers['eight'] = 8,  numbers['nine'] = 9, 
-  numbers['eleven'] = 11, numbers['twelve'] = 12,
+  numbers['ten'] = 10, numbers['eleven'] = 11, numbers['twelve'] = 12,
   numbers['thirteen'] = 13, numbers['fourteen'] = 14,  numbers['fifteen'] = 15,
   numbers['sixteen']  = 16, numbers['seventeen'] = 17,  numbers['eighteen'] = 18,
   numbers['nineteen']  = 19,
