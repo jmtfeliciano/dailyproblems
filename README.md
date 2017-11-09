@@ -11,4 +11,5 @@ Problems may come from various textbooks, leetcode, and interesting questions fr
 - `stripURL.js` because I had to use new Map() instead of using regular object.  Map retains order; regular objects do not.  
 - `solomonDistanceGame.js` because instead of using if-else or switch, I utilized nested ternary operators.
 - `highLow.js` because while it was an easy problem, I utilized .sort() with a callback and used ES6 string template literal
+- `trackCharString.js` because I used regex and String.prototype.match() to track of desired characters
 
