@@ -14,5 +14,45 @@ Def of tree:  function TreeNode(val) {
 */
 
 var constructMaximumBinaryTree = function(nums) {
-
+  function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+  }
+  
+  function findMaxIndex(currentArray){
+    let highestIndex, highestValue;
+    currentArray.forEach(function(val,i){
+      if(!highestIndex){
+        highestValue=val;
+        highestIndex = i;
+        return;
+      }else if(highestValue < val){
+        highestValue=val;
+        highestIndex = i;
+      }
+    });
+    return highestIndex;
+  }
+  
+  function nodeSplitter(arr){
+    if(arr.length===0){
+      return null;
+    }else{
+      let toCutIndex = findMaxIndex(arr);
+      let nodeValue = arr[toCutIndex];
+      let leftSide = arr.slice(0,toCutIndex);
+      let rightSide = arr.slice(toCutIndex+1);
+      let node = new TreeNode(nodeValue);
+      if(leftSide.length > 0){
+        node.left = nodeSplitter(leftSide);
+      }
+      if(rightSide.length > 0){
+        node.right = nodeSplitter(rightSide);
+      }
+      return node;
+      
+    }
+  }
+  
+  return nodeSplitter(nums);
 };
