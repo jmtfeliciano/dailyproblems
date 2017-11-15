@@ -56,3 +56,8 @@ var constructMaximumBinaryTree = function(nums) {
   
   return nodeSplitter(nums);
 };
+
+/*
+The JSON.stringify([3,2,1,6,0,5]) of results should result: 
+{"val":6,"right":{"val":5,"right":null,"left":{"val":0,"right":null,"left":null}},"left":{"val":2,"right":{"val":1,"right":null,"left":null},"left":{"val":3,"right":null,"left":null}}}
+*/
