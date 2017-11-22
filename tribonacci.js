@@ -9,5 +9,15 @@ But what if we started with [0, 0, 1] as a signature? As starting with [0, 1] in
 
 
 function tribonacci(signature,n){
+  let tribArray = ([]).concat(signature);
 
+  if(n<3){
+    return tribArray.slice(0,n);
+  }
+
+  for(let i=3; i < n; i++){
+    tribArray.push(tribArray[i-1]+tribArray[i-2]+tribArray[i-3]);
+  } 
+
+  return tribArray;
 }
