@@ -12,4 +12,4 @@ Problems may come from various textbooks, leetcode, and interesting questions fr
 - `solomonDistanceGame.js` because instead of using if-else or switch, I utilized nested ternary operators.
 - `highLow.js` because while it was an easy problem, I utilized .sort() with a callback and used ES6 string template literal
 - `trackCharString.js` because I used regex and String.prototype.match() to track of desired characters
-
+- `underscoreDefaults.js` because I used Array.prototype.slice.call() and arguments. Also, should use undefined as a filter instead of !, because falseys such as 0 passes the ! test.
