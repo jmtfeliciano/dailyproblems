@@ -9,4 +9,16 @@ e.g. sortArray([5, 3, 2, 8, 1, 4]) == [1, 3, 2, 8, 5, 4]
 
 function sortArray(array) {
   // Return a sorted array.
+
+  // Brute force solution
+  let oddArray = [];
+  let evenArray = [];
+  for(let i=0; i < array.length; i++){
+    if(array[i] % 2 !== 0){
+      oddArray.push(array[i]);
+      array[i] = false;
+    }
+  }
+  
+  
 }
