@@ -12,13 +12,25 @@ function sortArray(array) {
 
   // Brute force solution
   let oddArray = [];
-  let evenArray = [];
   for(let i=0; i < array.length; i++){
     if(array[i] % 2 !== 0){
       oddArray.push(array[i]);
       array[i] = false;
     }
   }
-  
+  oddArray.sort(function(a,b){return a-b});
+
+  let currentIndex = 0; // to keep track of where we at
+  let currentOddIndex = 0;
+
+  while(oddArray.length > currentOddIndex){
+    while(array[currentIndex] !== false){
+      currentIndex++;
+    }
+    array[currentIndex] = oddArray[currentOddIndex];
+    currentOddIndex++;
+  }
+
+  return array;
   
 }
